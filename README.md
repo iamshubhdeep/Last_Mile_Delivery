@@ -1,4 +1,3 @@
-# Last_Mile_Delivery
 # 🚚 Last Mile Delivery Tracker
 
 An end-to-end **Last Mile Delivery Management System** built using **React (Vite)**, **FastAPI**, and **PostgreSQL**. The platform allows customers to create delivery orders, admins to manage zones and assign delivery agents, and agents to update delivery status in real time.
