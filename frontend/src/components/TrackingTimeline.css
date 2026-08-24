@@ -1,0 +1,94 @@
+.tracking-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.tracking-timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 1rem;
+  bottom: 1rem;
+  width: 2px;
+  background: var(--border-glass);
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--text-secondary);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.timeline-content {
+  flex: 1;
+  padding-bottom: 1rem;
+}
+
+.timeline-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.timeline-notes {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+/* States */
+.timeline-item.completed .timeline-marker {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.timeline-item.completed .timeline-status {
+  color: var(--text-primary);
+}
+
+.timeline-item.active .timeline-marker {
+  background: var(--bg-primary);
+  border-color: var(--accent-cyan);
+  border-width: 4px;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+}
+
+.timeline-item.active .timeline-status {
+  color: var(--accent-cyan);
+}
+
+.timeline-item.failed .timeline-marker {
+  border-color: var(--status-error);
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.5);
+}
+
+.timeline-item.failed .timeline-status {
+  color: var(--status-error);
+}
