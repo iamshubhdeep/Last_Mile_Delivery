@@ -352,6 +352,5 @@ Routes `/api/*` to FastAPI and all other routes to React.
 **Shubhdeep Singh**
 
 B.Tech Computer Science Engineering
-VIT Bhopal University
 
-GitHub: https://github.com/iamshubhdeep
+VIT Bhopal University
